@@ -1,0 +1,22 @@
+<h1>Books New Form</h1>
+
+<% if flash[:errors]%>
+	<% flash[:erros].each do |error|%>
+		<p style="color: red"><%= error%></p>
+	<%end%>
+<%end%>
+
+<%= form_for @book do |f|%>
+	<%= f.label :title%>
+	<%= f.text_field :title %>
+	<%= f.label :author%>
+	<%= f.text_field :author %>
+	<%= f.label :genre%>
+	<%= f.text_field :genre %>
+	<%= f.label :price%>
+	<%= f.number_field :price %>
+	<%= f.label :publication-date%>
+	<%= f.string_field :publication-date %>
+
+	<%= f.sumbit%>
+<%end%>
