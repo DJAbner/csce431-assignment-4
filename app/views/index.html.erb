@@ -1,0 +1,14 @@
+<root>
+	<h1>Book Collection</h1>
+
+	<body>
+		<ul>
+			<% @books.each do |book|%>
+			<li>
+				<%= link_to book.name, show_book_path(book)%>
+			</li>
+			<%end%>
+		</ul>
+		<%= button_to "Add new Book", new_book_path, method: :get %>
+	</body>
+</root>
